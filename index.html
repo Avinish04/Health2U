@@ -124,17 +124,22 @@
 
     <!-- Contact Us page -->
     <div id="contactus">
-          <form method="POST" action="https://formsubmit.co/avinishpankaj04@gmail.com" enctype="multipart/form-data">
-            <section class="contact">
-                <h1>Contact Us</h1>
-                   <input type="email" name="email" placeholder="Your email">
-                   <textarea name="message" placeholder="Details of your problem"></textarea>
-                   <input type="file" name="attachment" accept="image/png, image/jpeg">
-                 <button type="submit">Submit</button>
-               </form>
-             </section>
-          </form>
+        <form id="myForm">
+            <!-- Your form fields here -->
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Type your message here"></textarea>
+            <button type="submit">Submit</button>
+        </form>
       </div>
+      <script>
+        const form = document.getElementById('myForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent default form submission
+            alert('Form submitted successfully!'); // Display success message
+            // You can also redirect to another page or perform other actions here
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
